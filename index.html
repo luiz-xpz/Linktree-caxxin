@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0a10" />
+    <meta
+      name="description"
+      content="Encontre os links oficiais do Caxxin: YouTube, Instagram e contato para feedbacks."
+    />
+    <title>Caxxin — Links oficiais</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/6d056a35-9990-4e79-a0b5-ba370c704cd6.png"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b0a10;
+        --panel: rgba(23, 20, 33, 0.88);
+        --text: #f8f7fc;
+        --muted: #aaa5b8;
+        --purple: #a855f7;
+        --purple-light: #c084fc;
+        --line: rgba(255, 255, 255, 0.1);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        min-height: 100%;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 36px 18px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--text);
+        font-family:
+          Inter,
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background:
+          radial-gradient(
+            ellipse at 50% 0%,
+            rgba(126, 34, 206, 0.23),
+            transparent 42%
+          ),
+          radial-gradient(
+            ellipse at 100% 80%,
+            rgba(91, 33, 182, 0.12),
+            transparent 36%
+          ),
+          var(--bg);
+      }
+      a {
+        color: inherit;
+      }
+      .page {
+        width: 100%;
+        max-width: 440px;
+      }
+      .profile {
+        text-align: center;
+        padding: 28px 24px 22px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: linear-gradient(
+          180deg,
+          rgba(26, 22, 37, 0.92),
+          rgba(16, 14, 22, 0.8)
+        );
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(14px);
+      }
+      .avatar-wrap {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 17px;
+      }
+      .avatar {
+        display: block;
+        width: 108px;
+        height: 108px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #b56bff;
+        box-shadow:
+          0 0 0 7px rgba(168, 85, 247, 0.1),
+          0 0 32px rgba(168, 85, 247, 0.28);
+        background: #21182e;
+      }
+      
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 7vw, 2.15rem);
+        letter-spacing: -0.04em;
+      }
+      .handle {
+        margin: 5px 0 12px;
+        color: var(--purple-light);
+        font-size: 0.9rem;
+        font-weight: 650;
+      }
+      .bio {
+        max-width: 300px;
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: 17px;
+        padding: 7px 11px;
+        border-radius: 999px;
+        color: #ded0f8;
+        background: rgba(168, 85, 247, 0.1);
+        border: 1px solid rgba(168, 85, 247, 0.24);
+        font-size: 0.75rem;
+        font-weight: 650;
+        letter-spacing: 0.03em;
+      }
+      .tag-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--purple-light);
+      }
+      .section-label {
+        margin: 24px 4px 11px;
+        color: #8d879c;
+        font-size: 0.72rem;
+        font-weight: 750;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+      }
+      .links {
+        display: grid;
+        gap: 11px;
+      }
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-height: 72px;
+        padding: 13px 16px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        text-decoration: none;
+        background: rgba(24, 21, 32, 0.9);
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .link:hover {
+        transform: translateY(-3px);
+        border-color: rgba(192, 132, 252, 0.65);
+        background: #21192d;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+      }
+      .link:focus-visible {
+        outline: 3px solid var(--purple-light);
+        outline-offset: 3px;
+      }
+      .link.primary {
+        background: linear-gradient(110deg, #7e22ce, #9333ea 58%, #a855f7);
+        border-color: transparent;
+        box-shadow: 0 9px 25px rgba(147, 51, 234, 0.22);
+      }
+      .link.primary:hover {
+        background: linear-gradient(110deg, #6b21a8, #8b2be2 58%, #9333ea);
+        box-shadow: 0 12px 30px rgba(147, 51, 234, 0.3);
+      }
+      .icon-box {
+        display: grid;
+        place-items: center;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        color: #e9d5ff;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .link:not(.primary) .icon-box {
+        background: rgba(168, 85, 247, 0.12);
+        color: var(--purple-light);
+      }
+      .link-copy {
+        flex: 1;
+        text-align: left;
+        min-width: 0;
+      }
+      .link-title {
+        display: block;
+        font-weight: 750;
+        font-size: 0.98rem;
+      }
+      .link-subtitle {
+        display: block;
+        margin-top: 3px;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 0.78rem;
+      }
+      .arrow {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 1.25rem;
+        transition: transform 0.2s ease;
+      }
+      .link:hover .arrow {
+        transform: translateX(3px);
+      }
+      .milestones {
+        margin-top: 23px;
+        padding: 17px;
+        text-align: left;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(18, 16, 25, 0.72);
+      }
+      .milestones h2 {
+        margin: 0 0 13px;
+        font-size: 0.88rem;
+      }
+      .milestone-list {
+        display: grid;
+        gap: 10px;
+      }
+      .milestone {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 0.79rem;
+      }
+      .milestone strong {
+        color: #f2eaff;
+        font-weight: 650;
+      }
+      .milestone .done {
+        color: #86efac;
+      }
+      footer {
+        padding: 20px 8px 0;
+        text-align: center;
+        color: #777184;
+        font-size: 0.75rem;
+        line-height: 1.7;
+      }
+      footer a {
+        color: #c084fc;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .footer-brand {
+        color: #b9b2c8;
+        font-weight: 650;
+      }
+      @media (max-width: 380px) {
+        body {
+          padding: 18px 12px;
+          align-items: flex-start;
+        }
+        .profile {
+          padding: 24px 16px 20px;
+          border-radius: 23px;
+        }
+        .avatar {
+          width: 96px;
+          height: 96px;
+        }
+        .link {
+          padding: 12px;
+          min-height: 68px;
+        }
+        .milestone {
+          font-size: 0.74rem;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="profile" aria-labelledby="profile-name">
+        <div class="avatar-wrap">
+          <img
+            class="avatar"
+            src="https://yt3.googleusercontent.com/oe_2TJ9kxv8O2BYh5KGbb7WHPTI7Ui_dLl1p52VNzardPCEx4YOcX5badEgyqSS_1umWOSwBwg=s160-c-k-c0x00ffffff-no-rj"
+            alt="Foto de perfil do Caxxin"
+          />
+          
+        </div>
+        <h1 id="profile-name">Caxxin</h1>
+        <p class="handle">@caxxin · Criador de conteúdo</p>
+        <p class="bio">
+          Gameplay, Fortnite e momentos insanos. Cola nas redes e acompanha os
+          próximos vídeos!
+        </p>
+        <span class="tag"><span class="tag-dot"></span> CONTEÚDO GAMER</span>
+      </section>
+
+      <p class="section-label">Encontre o Caxxin</p>
+      <nav class="links" aria-label="Links oficiais">
+        <a
+          class="link primary"
+          href="https://youtube.com/@caxxin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon-box" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"
+              />
+            </svg>
+          </span>
+          <span class="link-copy"
+            ><span class="link-title">YouTube</span
+            ><span class="link-subtitle"
+              >Vídeos, gameplays e novidades</span
+            ></span
+          >
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+        <a
+          class="link"
+          href="https://www.instagram.com/caixetxs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon-box" aria-hidden="true">
+            <svg
+              width="23"
+              height="23"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </span>
+          <span class="link-copy"
+            ><span class="link-title">Instagram</span
+            ><span class="link-subtitle">Bastidores e atualizações</span></span
+          >
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+        <a
+          class="link"
+          href="https://discord.gg/Bg5dxqWJJ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon-box" aria-hidden="true">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.73 5.08A19.9 19.9 0 0 0 14.8 3.56a.08.08 0 0 0-.09.04c-.21.37-.44.85-.6 1.23a18.3 18.3 0 0 0-5.5 0c-.16-.39-.4-.86-.61-1.23a.09.09 0 0 0-.09-.04 19.8 19.8 0 0 0-4.93 1.52.08.08 0 0 0-.04.03C-.2 9.72-.9 14.22-.45 18.67a.1.1 0 0 0 .04.07 19.9 19.9 0 0 0 6.04 3.05.09.09 0 0 0 .1-.03c.47-.64.89-1.31 1.25-2.02a.09.09 0 0 0-.05-.12 13.1 13.1 0 0 1-1.89-.9.09.09 0 0 1-.01-.15c.13-.1.25-.2.37-.3a.09.09 0 0 1 .09-.01c3.96 1.81 8.25 1.81 12.16 0a.09.09 0 0 1 .1.01c.12.1.24.21.37.3a.09.09 0 0 1-.01.15c-.6.35-1.23.65-1.89.9a.09.09 0 0 0-.05.12c.37.71.79 1.38 1.25 2.02a.09.09 0 0 0 .1.03 19.8 19.8 0 0 0 6.05-3.05.1.1 0 0 0 .04-.07c.53-5.14-.88-9.6-3.73-13.56a.08.08 0 0 0-.04-.03ZM8.02 15.1c-1.19 0-2.17-1.09-2.17-2.43s.96-2.43 2.17-2.43c1.22 0 2.19 1.1 2.17 2.43 0 1.34-.96 2.43-2.17 2.43Zm7.96 0c-1.19 0-2.17-1.09-2.17-2.43s.96-2.43 2.17-2.43c1.22 0 2.19 1.1 2.17 2.43 0 1.34-.95 2.43-2.17 2.43Z"
+              />
+            </svg>
+          </span>
+          <span class="link-copy"
+            ><span class="link-title">Entre pra comunidade do Caxxin</span
+            ><span class="link-subtitle"
+              >Crie novas amizades e veja mais sobre o canal</span
+            ></span
+          >
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+      </nav>
+
+      <section class="milestones" aria-labelledby="milestones-title">
+        <h2 id="milestones-title">📈 Jornada do canal</h2>
+        <div class="milestone-list">
+          <div class="milestone">
+            <span><strong class="done">✓</strong> 100 inscritos</span
+            ><span>25/05/2026</span>
+          </div>
+          <div class="milestone">
+            <span><strong class="done">✓</strong> 500 inscritos</span
+            ><span>31/05/2026</span>
+          </div>
+          <div class="milestone">
+            <span><strong class="done">✓</strong> Meta: 1.000 inscritos</span
+            ><span>24/06/2026</span>
+          </div>
+          <div class="milestone">
+            <span><strong>◦</strong> Meta: 5.000 inscritos</span
+            >
+          </div>
+          <div class="milestone">
+            <span><strong>◦</strong> Meta: 10.000 inscritos</span>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-brand">
+          Caxxin · Um menino cacheado que joga um jogo quadrado.
+        </div>
+        <div>Feito com cuidado para a comunidade gamer.
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
